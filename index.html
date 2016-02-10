@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Heart Transplants of America</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+	   <script src="js/Chart.js"></script>
+	   <script src="js/Chart.min.js"></script>
+	   <script src="js/Chart.Core.js"></script>
+		<script src="js/Chart.Doughnut.js"></script>
+		<script src="js/Chart.PolarArea.js"></script>
+
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+ </head> 
+	
+<body>
+
+ 
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Heart Transplants in America </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section">by Organs</a></li>
+		<li><a href="#slide2" title="Next Section">Fact #1</a></li>
+		<li><a href="#slide3" title="Next Section">Wait List</a></li>
+		<li><a  href="#slide4" title="Next Section">Fact #2</a></li>
+		<li><a  href="#slide5" title="Next Section">Hearts</a></li>
+		<li><a href="#slide6" title="Next Section">Fact #3</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+ 
+ 	
+	<div id="slide1">
+		<div class="content">
+			<div id="canvas-holder">
+			<canvas id="chart-area" width="150" height="150"/>
+		</div>
+
+<script>
+		var pieData = [
+				{
+					value: 61798,
+        			color: "#330014",
+       				highlight: "#4d001e",
+       				label: "Heart"
+    			}, 
+    			{
+        			value: 30497,
+       				color: "#800032",
+       				highlight: "#99003c",
+       				label: "Lung"
+   				}, 
+   				{
+       				value: 8070,
+       				color: "#cc0050",
+        			highlight: "#ff0064",
+        			label: "Pancreas"
+    			}, 
+   				{
+        			value: 381739,
+        			color: "#b30042",
+        			highlight: "#ff1a74s",
+        			label: "Kidney"
+    			}, 
+    			{
+        			value: 138330,
+        			color: "#ff005e",
+       				highlight: "#ff337e",
+       				label: "Liver"
+       			}, 
+    			{
+        			value: 9176,
+        			color: "#ff4d8e",
+       				highlight: "#ff669e",
+       				label: "Heart-Lung"
+
+    	}];
+
+	</script>
+	<h2>Number of Transplants by Organ Type</h2>
+		<h3>ALL DATA PRESENTED BASED ON ORGAN PROCURMENT AND TRANSPLANTATION NETWORK DATA</h3>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="quotes">DID YOU KNOW? Organs are not matched according to race/ethnicity, and people of different races frequently match one another, all individuals waiting for an organ transplant will have a better chance of receiving one if there are large numbers of donors from their racial/ethnic background. A greater diversity of donors may potentially increase access to transplantation for everyone.</h3>
+		</div> 
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content">
+			   <div id="canvas-holder2">
+			<canvas id="chart-area2" width="150" height="150"/>
+		</div>
+
+<script>
+		var pieData2 = [
+				{
+					value: 43451,
+        			color: "#003333",
+       				highlight: "#004c4d",
+       				label: "2015"
+    			}, 
+    			{
+        			value: 58852,
+       				color: "#006466",
+       				highlight: "#007e80",
+       				label: "2014"
+   				}, 
+   				{
+       				value: 58693,
+       				color: "#009799",
+        			highlight: "#00b0b3",
+        			label: "2013"
+    			}, 
+   				{
+        			value: 56309,
+        			color: "#00c9cc",
+        			highlight: "#00e2e6",
+        			label: "2012"
+    			}, 
+    			{
+        			value: 55074,
+        			color: "#00264d",
+       				highlight: "#004080",
+       				label: "2011"
+       			},
+       			{
+        			value: 53430,
+        			color: "#00264d",
+       				highlight: "#004080",
+       				label: "2010"
+       			}, 
+       			{
+        			value: 54862,
+        			color: "#0072e6",
+       				highlight: " #007eff",
+       				label: "2009"
+       			}, 
+       			{
+        			value: 53420,
+        			color: "#1a8bff",
+       				highlight: "#004080",
+       				label: "2008"
+       			}, 
+    			{
+        			value: 52857,
+        			color: "#004c99",
+       				highlight: "#0059b3",
+       				label: "2007"
+
+    	}];
+			
+
+	</script>
+		</div> 
+
+		<h1>Waiting List for All Organs by Year</h1>
+		
+    </div> 
+	
+	
+	<div id="slide4">
+		<div class="content">
+              <div class="quotes_container">
+		    <h3 class="quotes">HOW ABOUT SOME DONOR HEART FACTS: Heart transplantation is the current standard of care for end-stage heart failure. However, over the last 20 years, despite growing demand, the supply of donor hearts has remained flat. Only about 2,200 donor hearts become available each year in the U.S. and about 3,500 worldwide. </h3>
+		</div> 
+		</div> 
+    </div> 
+	
+	<div id="slide5">
+		<div class="content">
+              <div id="canvas-holder3">
+			<canvas id="chart-area3" width="150" height="150"/>
+		</div>
+
+<script>
+		var pieData3 = [
+				{
+					value: 362,
+        			color: "#b30000",
+       				highlight: " #cc0000",
+       				label: "< 1 Year"
+    			}, 
+    			{
+        			value: 837,
+       				color: "#e60000",
+       				highlight: "#ff1a1a",
+       				label: "1-10 Years"
+   				}, 
+   				{
+       				value: 5431,
+       				color: "#ff4d4d",
+        			highlight: "#ff6666",
+        			label: "11-34 Years"
+    			}, 
+   				{
+        			value: 29423,
+        			color: "#4d0000",
+        			highlight: " #660000",
+        			label: "35-64+ Years"
+    			}, 
+    			];
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myPie = new Chart(ctx).Pie(pieData, {responsive : true });
+				var ctx2 = document.getElementById("chart-area2").getContext("2d");
+				window.myPie2 = new Chart(ctx2).Pie(pieData2, {responsive : true});
+				var ctx3 = document.getElementById("chart-area3").getContext("2d");
+				window.myPie3 = new Chart(ctx3).Pie(pieData3, {responsive : true});
+			};
+
+	</script>
+	<h2>Heart Transplant Recipients in 2015</h2>
+		<h3>About 3,100 people in the United States are on the waiting list for a heart transplant on any given day. Only 2,200 donor hearts are available each year</h3>
+		</div> 
+
+    </div> 
+
+    <div id="slide6">
+		<div class="content">
+              <div class="quotes_container">
+		    <h3 class="quotes">DID YOU KNOW? <b>THIRTY</b> years ago, medical science reached an extraordinary - <i>but not rare </i>- moment when several groups were independently preparing to introduce a new therapy<br><br> In the late 1960s, that therapy was transplantation of a heart from one human to another. </h3>
+		  <h4 class="author_name_gray">- America's First Human Heart Transplantation, Adrian Kantrowitz</h4>
+		</div>   
+		</div> 
+		</div>
+
+		<div id="slide7">
+		<div id="copyright">Data Viz and Info Aesthetics | Fall 2015</a></div></div>
+    </div> 
+
+	
+
+</body>
+</html>
